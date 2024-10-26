@@ -11,7 +11,6 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ProfilePageViewController: UIViewController {
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

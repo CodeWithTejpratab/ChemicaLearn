@@ -10,7 +10,7 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseFirestore
 
-class LoginViewController: SuperLoginUIViewController {
+class LoginViewController: AppUIViewControllerHelper {
     
     @IBOutlet weak var loginTextBackground: UIImageView!
     @IBOutlet weak var loginPasswordBackground: UIImageView!
@@ -22,9 +22,7 @@ class LoginViewController: SuperLoginUIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if checkIfLoggedInBefore() {
-            self.performSegue(withIdentifier: K.loginSegue, sender: self)
-        }
+        isLoggedIn ? self.performSegue(withIdentifier: K.loginSegue, sender: self) : ()
     }
     
     override func viewDidLoad() {
@@ -36,37 +34,30 @@ class LoginViewController: SuperLoginUIViewController {
     // MARK: - Handle Login
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-            loginAnimateOnPressed(for: signinButtonImage)
+        loginAnimateOnPressed(for: signinButtonImage)
     }
     
     override func loginAnimateOnPressed(for img: UIImageView) {
         super.loginAnimateOnPressed(for: img)
         
-        if let email = loginEmailText.text, let password = loginPasswordText.text{
+        if let email = loginEmailText.text, let password = loginPasswordText.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     self.setTextFieldBackground(to: K.imgText.incorrectLogin)
                     self.showErrorAlert(with: e.localizedDescription)
-                }
-                else{
+                } else {
                     self.setTextFieldBackground(to: K.imgText.loginTextField)
                     self.performSegue(withIdentifier: K.loginSegue, sender: self)
                 }
             }
         }
-        
     }
     
     // MARK: - Components Methods
     
-    func checkIfLoggedInBefore() -> Bool {
-        if Auth.auth().currentUser != nil {
-            return true
-        }
-        return false
-    }
+    private var isLoggedIn: Bool { Auth.auth().currentUser != nil }
     
-    func setTextFieldBackground(to img: String){
+    private func setTextFieldBackground(to img: String) {
         loginTextBackground.image = UIImage(named: img)
         loginPasswordBackground.image = UIImage(named: img)
     }

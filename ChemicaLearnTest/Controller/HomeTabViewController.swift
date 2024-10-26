@@ -14,7 +14,6 @@ class HomeTabViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
     private let quizSelectionArray = [
          K.quiz.simpleReaction, K.quiz.organicChemistry, K.quiz.moleculeMaker,
          K.quiz.acidBaseRacation, K.quiz.electroChemistry, 
@@ -25,14 +24,13 @@ class HomeTabViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellName)
         
     }
     
 }
 
-extension HomeTabViewController: UITableViewDelegate, UITableViewDataSource{
+extension HomeTabViewController: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - Data Source Methods
     
@@ -48,8 +46,7 @@ extension HomeTabViewController: UITableViewDelegate, UITableViewDataSource{
         
         if indexPath.row % 2 == 0 {
             cell.leftView.isHidden = true
-        }
-        else {
+        } else {
             cell.rightView.isHidden = true
         }
         
@@ -57,6 +54,7 @@ extension HomeTabViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     // MARK: - Delegate Methods
+    
     func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
         print(quizSelectionArray[indexPath.row])
     }
