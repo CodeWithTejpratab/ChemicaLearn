@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -53,6 +53,10 @@
 		8DEBB9012C0C407100213907 /* displayQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayQuizCell.swift; sourceTree = "<group>"; };
 		8DEBB9022C0C407100213907 /* displayQuizCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = displayQuizCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UIComponents; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8D2194CE2BF17E8A0042C653 /* Frameworks */ = {
@@ -123,6 +127,7 @@
 		8D2194D32BF17E8A0042C653 /* ChemicaLearnTest */ = {
 			isa = PBXGroup;
 			children = (
+				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
 				8D2194D42BF17E8A0042C653 /* AppDelegate.swift */,
 				8D2194D62BF17E8A0042C653 /* SceneDelegate.swift */,
 				8D121CC72BF28F49004434A8 /* Model */,
@@ -149,6 +154,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
 			);
 			name = ChemicaLearn;
 			packageProductDependencies = (

@@ -15,8 +15,11 @@ class HomeTabViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let quizSelectionArray = [
-         K.quiz.simpleReaction, K.quiz.organicChemistry, K.quiz.moleculeMaker,
-         K.quiz.acidBaseRacation, K.quiz.electroChemistry, 
+         K.quiz.simpleReaction,
+         K.quiz.organicChemistry,
+         K.quiz.moleculeMaker,
+         K.quiz.acidBaseRacation,
+         K.quiz.electroChemistry,
     ]
     
     override func viewDidLoad() {
@@ -42,22 +45,15 @@ extension HomeTabViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellName, for: indexPath) as! displayQuizCell
         
-        cell.quizImage.image = UIImage(named: quizSelectionArray[indexPath.row])
-        
-        if indexPath.row % 2 == 0 {
-            cell.leftView.isHidden = true
-        } else {
-            cell.rightView.isHidden = true
-        }
+        // Configure the cell with the image and index
+        cell.configure(with: quizSelectionArray[indexPath.row], index: indexPath.row)
         
         return cell
     }
     
     // MARK: - Delegate Methods
     
-    func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(quizSelectionArray[indexPath.row])
     }
-    
 }
-

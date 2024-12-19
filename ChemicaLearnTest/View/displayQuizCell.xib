@@ -1,67 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="272" id="KGk-i7-Jjw" customClass="displayQuizCell" customModule="ChemicaLearn" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="598" height="272"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="706" id="KGk-i7-Jjw" customClass="displayQuizCell" customModule="ChemicaLearn" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1273" height="706"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="598" height="272"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM" customClass="DisplayQuizCell" customModule="ChemicaLearn" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="1273" height="706"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kCL-Aa-wrv">
-                        <rect key="frame" x="15" y="15" width="568" height="249"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oz4-12-FdE" userLabel="leftView">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="249"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="K3y-cB-PHR"/>
-                                </constraints>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="organicChemistry" translatesAutoresizingMaskIntoConstraints="NO" id="bot-MZ-Aje">
-                                <rect key="frame" x="248" y="0.0" width="130" height="249"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="IA7-bj-5oI"/>
-                                    <constraint firstAttribute="height" constant="180" id="Vyh-Qn-3x4"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hGs-BZ-HDc" userLabel="rightview">
-                                <rect key="frame" x="386" y="0.0" width="182" height="249"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </stackView>
-                </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                <constraints>
-                    <constraint firstAttribute="bottom" secondItem="kCL-Aa-wrv" secondAttribute="bottom" constant="15" id="UcZ-ae-sRe"/>
-                    <constraint firstItem="kCL-Aa-wrv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hLa-Hq-EM4"/>
-                    <constraint firstItem="kCL-Aa-wrv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="ieT-HF-LaS"/>
-                    <constraint firstAttribute="trailing" secondItem="kCL-Aa-wrv" secondAttribute="trailing" constant="15" id="rPn-Ki-Ibr"/>
-                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="leftView" destination="oz4-12-FdE" id="fO7-CL-h8Y"/>
-                <outlet property="quizImage" destination="bot-MZ-Aje" id="bqG-rX-pNx"/>
-                <outlet property="rightView" destination="hGs-BZ-HDc" id="em2-KL-9Wh"/>
+                <outlet property="containerView" destination="H2p-sc-9uM" id="TJy-jL-faY"/>
             </connections>
-            <point key="canvasLocation" x="-103.81679389312977" y="66.197183098591552"/>
+            <point key="canvasLocation" x="411.4503816793893" y="219.01408450704227"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="organicChemistry" width="80.666664123535156" height="93.333335876464844"/>
-    </resources>
 </document>
