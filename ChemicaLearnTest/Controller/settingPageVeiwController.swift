@@ -10,26 +10,41 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseFirestore
 
-class settingPageVeiwController: SuperLoginUIViewController {
+class settingPageVeiwController: AppUIViewControllerHelper {
     
+    @IBOutlet weak var userNameButtonImg: UIImageView!
+    @IBOutlet weak var emailButtonImg: UIImageView!
+    @IBOutlet weak var passwordButtonImg: UIImageView!
     @IBOutlet weak var logoutButtonImg: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func editUsernameButtonPresses(_ sender: UIButton) {
+        loginAnimateOnPressed(for: userNameButtonImg)
+        
+    }
+
+    @IBAction func changeEmailButtonPressed(_ sender: UIButton) {
+        loginAnimateOnPressed(for: emailButtonImg)
+        
+    }
+    
+    @IBAction func changePasswordButtonPressed(_ sender: UIButton) {
+        loginAnimateOnPressed(for: passwordButtonImg)
         
     }
     
     @IBAction func logoutButtonPressed(_ sender: UIButton) {
         loginAnimateOnPressed(for: logoutButtonImg)
-        
-        do{
+        do {
             try Auth.auth().signOut()
             performSegue(withIdentifier: K.logOutSegue, sender: self)
-        }catch{
-            print("Error while signing out!")
+        } catch {
+            self.showErrorAlert(with: K.AppError.signOutError)
         }
     }
-    
-    
     
     /*
      // MARK: - Navigation

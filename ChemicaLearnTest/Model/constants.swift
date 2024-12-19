@@ -43,11 +43,15 @@ struct K {
     
     struct message {
         static let resetmessage = "we have sent you an email to reset your password if the account exist"
-        static let errorMessageSignUp = "Something went wrong with email or password when trying to sign-up"
     }
     
     struct user {
         static let username = "username"
+    }
+    
+    struct AppError {
+        static let signOutError = "There was an error signing out"
+        static let SignUpError = "Something went wrong with email or password when trying to sign-up"
     }
     
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,7 @@
 		8D6274DC2C0A0B1600B67498 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8D6274DB2C0A0B1600B67498 /* FirebaseFirestore */; };
 		8D75B6B72C07DF800060E252 /* SiginUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6B62C07DF800060E252 /* SiginUpViewController.swift */; };
 		8D75B6B92C07DFA40060E252 /* ResetAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6B82C07DFA40060E252 /* ResetAccountViewController.swift */; };
-		8D75B6BB2C07E91B0060E252 /* SuperLoginUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6BA2C07E91B0060E252 /* SuperLoginUIViewController.swift */; };
+		8D75B6BB2C07E91B0060E252 /* AppUIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */; };
 		8D9646FC2C0BF02D00D17486 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9646FB2C0BF02D00D17486 /* HomeTabViewController.swift */; };
 		8DB2C76B2C08D2D400BC4764 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB2C76A2C08D2D400BC4764 /* IQKeyboardManagerSwift */; };
 		8DB2C76D2C092E4700BC4764 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2C76C2C092E4700BC4764 /* constants.swift */; };
@@ -45,7 +45,7 @@
 		8D6274D42C0A09FD00B67498 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D75B6B62C07DF800060E252 /* SiginUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginUpViewController.swift; sourceTree = "<group>"; };
 		8D75B6B82C07DFA40060E252 /* ResetAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetAccountViewController.swift; sourceTree = "<group>"; };
-		8D75B6BA2C07E91B0060E252 /* SuperLoginUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperLoginUIViewController.swift; sourceTree = "<group>"; };
+		8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIViewControllerHelper.swift; sourceTree = "<group>"; };
 		8D9646FB2C0BF02D00D17486 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		8DB2C76C2C092E4700BC4764 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		8DC91E222BF58CC8007A11BF /* OrganicChemistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicChemistry.swift; sourceTree = "<group>"; };
@@ -53,6 +53,10 @@
 		8DEBB9012C0C407100213907 /* displayQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayQuizCell.swift; sourceTree = "<group>"; };
 		8DEBB9022C0C407100213907 /* displayQuizCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = displayQuizCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UIComponents; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8D2194CE2BF17E8A0042C653 /* Frameworks */ = {
@@ -98,7 +102,7 @@
 			children = (
 				8DC91E222BF58CC8007A11BF /* OrganicChemistry.swift */,
 				8DC91E242BF58D20007A11BF /* SimpleReaction.swift */,
-				8D75B6BA2C07E91B0060E252 /* SuperLoginUIViewController.swift */,
+				8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */,
 				8DB2C76C2C092E4700BC4764 /* constants.swift */,
 			);
 			path = Model;
@@ -123,6 +127,7 @@
 		8D2194D32BF17E8A0042C653 /* ChemicaLearnTest */ = {
 			isa = PBXGroup;
 			children = (
+				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
 				8D2194D42BF17E8A0042C653 /* AppDelegate.swift */,
 				8D2194D62BF17E8A0042C653 /* SceneDelegate.swift */,
 				8D121CC72BF28F49004434A8 /* Model */,
@@ -149,6 +154,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
 			);
 			name = ChemicaLearn;
 			packageProductDependencies = (
@@ -225,7 +233,7 @@
 				8D75B6B72C07DF800060E252 /* SiginUpViewController.swift in Sources */,
 				8D2194D52BF17E8A0042C653 /* AppDelegate.swift in Sources */,
 				8D2194D72BF17E8A0042C653 /* SceneDelegate.swift in Sources */,
-				8D75B6BB2C07E91B0060E252 /* SuperLoginUIViewController.swift in Sources */,
+				8D75B6BB2C07E91B0060E252 /* AppUIViewControllerHelper.swift in Sources */,
 				8DEBB9032C0C407100213907 /* displayQuizCell.swift in Sources */,
 				8D44F2202C31AA1B0008847E /* ProfilePageViewController.swift in Sources */,
 				8D75B6B92C07DFA40060E252 /* ResetAccountViewController.swift in Sources */,
@@ -389,6 +397,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,6 +429,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

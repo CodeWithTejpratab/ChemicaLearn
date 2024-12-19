@@ -9,7 +9,7 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 
-class SiginUpViewController: SuperLoginUIViewController {
+class SiginUpViewController: AppUIViewControllerHelper {
     
     @IBOutlet weak var loginTextFieldBackground: UIImageView!
     @IBOutlet weak var userEmail: UITextField!
@@ -38,26 +38,24 @@ class SiginUpViewController: SuperLoginUIViewController {
     override func loginAnimateOnPressed(for img: UIImageView) {
         super.loginAnimateOnPressed(for: img)
         
-        if checkPassword(for: password.text, and: retypedPassword.text){
-            if let email = userEmail.text, let password = password.text{
+        if checkPassword(for: password.text, and: retypedPassword.text) {
+            if let email = userEmail.text, let password = password.text {
                 Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let e = error {
                         self.showErrorAlert(with: e.localizedDescription)
-                    }
-                    else {
+                    } else {
                         self.navigationController?.popToRootViewController(animated: true)
                     }
                 }
             }
-        }
-        else {
-            self.showErrorAlert(with: K.message.errorMessageSignUp)
+        } else {
+            self.showErrorAlert(with: K.AppError.SignUpError)
         }
     }
     
     //MARK: - Component Methods
     
-    func checkPassword(for password: String?, and retypePassword: String?) -> Bool{
+    func checkPassword(for password: String?, and retypePassword: String?) -> Bool {
         if let pass1 = password, let pass2 = retypePassword {
             if pass1 == pass2 {
                 return true
@@ -79,15 +77,13 @@ extension SiginUpViewController {
         updateUI(textField)
     }
     
-    
-    func updateUI(_ textField: UITextField){
+    func updateUI(_ textField: UITextField) {
         switch textField {
         case retypedPassword, password:
-            if let pass1 = password.text, let pass2 = retypedPassword.text{
+            if let pass1 = password.text, let pass2 = retypedPassword.text {
                 if pass1 != pass2{
                     retypedPasswordBackground.image = UIImage(named: K.imgText.incorrectLogin)
-                }
-                else {
+                } else {
                     retypedPasswordBackground.image = UIImage(named: K.imgText.loginTextField)
                 }
             }

@@ -9,14 +9,11 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 
-class ResetAccountViewController: SuperLoginUIViewController {
+class ResetAccountViewController: AppUIViewControllerHelper {
 
     @IBOutlet weak var resetTextBackground: UIImageView!
-    
     @IBOutlet weak var resetMessageLabel: UILabel!
-    
     @IBOutlet weak var resetTextField: UITextField!
-    
     @IBOutlet weak var resetButtonBackground: UIImageView!
     
     override func viewDidLoad() {
@@ -37,8 +34,7 @@ class ResetAccountViewController: SuperLoginUIViewController {
                 if let e = error {
                     self.resetMessageLabel.text = e.localizedDescription
                     self.resetTextBackground.image = UIImage(named: K.imgText.incorrectLogin)
-                }
-                else {
+                } else {
                     self.resetTextBackground.image = UIImage(named: K.imgText.loginTextField)
                     self.resetMessageLabel.text = K.message.resetmessage
                 }
