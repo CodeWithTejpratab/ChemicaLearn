@@ -9,6 +9,7 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 import FirebaseFirestore
+import SwiftUI
 
 class HomeTabViewController: UIViewController {
 
@@ -54,6 +55,10 @@ extension HomeTabViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: - Delegate Methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(quizSelectionArray[indexPath.row])
+        let selectedQuiz = quizSelectionArray[indexPath.row]
+        let quizScreenVC = QuizScreenView(for: selectedQuiz)
+        let hostingController = UIHostingController(rootView: quizScreenVC)
+        hostingController.modalPresentationStyle = .fullScreen
+        present(hostingController, animated: true, completion: nil)
     }
 }
