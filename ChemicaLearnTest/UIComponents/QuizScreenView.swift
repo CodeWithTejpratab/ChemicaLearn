@@ -31,6 +31,10 @@ struct QuizScreenView: View {
             VStack {
                 
                 HStack {
+                    Text("Score: \(quizManager.currentScore)")
+                        .bold()
+                        .font(.headline)
+                        .padding(.leading, 14)
                     
                     Spacer()
                     
