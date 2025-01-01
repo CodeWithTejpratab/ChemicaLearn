@@ -22,11 +22,11 @@
 		8D75B6B72C07DF800060E252 /* SiginUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6B62C07DF800060E252 /* SiginUpViewController.swift */; };
 		8D75B6B92C07DFA40060E252 /* ResetAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6B82C07DFA40060E252 /* ResetAccountViewController.swift */; };
 		8D75B6BB2C07E91B0060E252 /* AppUIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */; };
+		8D8C0A432D21EEB700871AAE /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C0A422D21EEB700871AAE /* QuizManager.swift */; };
 		8D9646FC2C0BF02D00D17486 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9646FB2C0BF02D00D17486 /* HomeTabViewController.swift */; };
 		8DB2C76B2C08D2D400BC4764 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB2C76A2C08D2D400BC4764 /* IQKeyboardManagerSwift */; };
 		8DB2C76D2C092E4700BC4764 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2C76C2C092E4700BC4764 /* constants.swift */; };
-		8DC91E232BF58CC8007A11BF /* OrganicChemistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC91E222BF58CC8007A11BF /* OrganicChemistry.swift */; };
-		8DC91E252BF58D20007A11BF /* SimpleReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC91E242BF58D20007A11BF /* SimpleReaction.swift */; };
+		8DC91E252BF58D20007A11BF /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC91E242BF58D20007A11BF /* Reaction.swift */; };
 		8DEBB9032C0C407100213907 /* displayQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB9012C0C407100213907 /* displayQuizCell.swift */; };
 		8DEBB9042C0C407100213907 /* displayQuizCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB9022C0C407100213907 /* displayQuizCell.xib */; };
 /* End PBXBuildFile section */
@@ -46,10 +46,10 @@
 		8D75B6B62C07DF800060E252 /* SiginUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginUpViewController.swift; sourceTree = "<group>"; };
 		8D75B6B82C07DFA40060E252 /* ResetAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetAccountViewController.swift; sourceTree = "<group>"; };
 		8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIViewControllerHelper.swift; sourceTree = "<group>"; };
+		8D8C0A422D21EEB700871AAE /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		8D9646FB2C0BF02D00D17486 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		8DB2C76C2C092E4700BC4764 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		8DC91E222BF58CC8007A11BF /* OrganicChemistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganicChemistry.swift; sourceTree = "<group>"; };
-		8DC91E242BF58D20007A11BF /* SimpleReaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleReaction.swift; sourceTree = "<group>"; };
+		8DC91E242BF58D20007A11BF /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
 		8DEBB9012C0C407100213907 /* displayQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayQuizCell.swift; sourceTree = "<group>"; };
 		8DEBB9022C0C407100213907 /* displayQuizCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = displayQuizCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,10 +100,10 @@
 		8D121CC72BF28F49004434A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8DC91E222BF58CC8007A11BF /* OrganicChemistry.swift */,
-				8DC91E242BF58D20007A11BF /* SimpleReaction.swift */,
+				8DC91E242BF58D20007A11BF /* Reaction.swift */,
 				8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */,
 				8DB2C76C2C092E4700BC4764 /* constants.swift */,
+				8D8C0A422D21EEB700871AAE /* QuizManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,8 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8C0A432D21EEB700871AAE /* QuizManager.swift in Sources */,
 				8D59C7BB2C266BC300A6378C /* settingPageVeiwController.swift in Sources */,
-				8DC91E232BF58CC8007A11BF /* OrganicChemistry.swift in Sources */,
 				8D121CC62BF28EF3004434A8 /* LoginViewController.swift in Sources */,
 				8DB2C76D2C092E4700BC4764 /* constants.swift in Sources */,
 				8D75B6B72C07DF800060E252 /* SiginUpViewController.swift in Sources */,
@@ -237,7 +237,7 @@
 				8DEBB9032C0C407100213907 /* displayQuizCell.swift in Sources */,
 				8D44F2202C31AA1B0008847E /* ProfilePageViewController.swift in Sources */,
 				8D75B6B92C07DFA40060E252 /* ResetAccountViewController.swift in Sources */,
-				8DC91E252BF58D20007A11BF /* SimpleReaction.swift in Sources */,
+				8DC91E252BF58D20007A11BF /* Reaction.swift in Sources */,
 				8D9646FC2C0BF02D00D17486 /* HomeTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
