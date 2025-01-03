@@ -30,6 +30,7 @@ class QuizManager: ObservableObject {
         }
     }
     
+    @Published var gameComplete = false
     @Published var count = 0
     @Published var currentScore = 0
     
@@ -54,8 +55,12 @@ class QuizManager: ObservableObject {
         
         let isCorrect = (title == shuffledQuiz[count].correctChoice)
         handleResults(isCorrect)
-        
         if isCorrect { currentScore += 1 }
+        if count == shuffledQuiz.count - 1 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                self.gameComplete = true
+            }
+        }
         if count < shuffledQuiz.count - 1 { count += 1 }
     }
     

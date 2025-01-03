@@ -4,6 +4,7 @@
 //
 //  Created by Rahul Ramjeawon on 12/19/24.
 //
+// You are destined for great things, I know it! ~ Wifey
 
 import SwiftUI
 
@@ -22,83 +23,105 @@ struct QuizScreenView: View {
     }
     
     var body: some View {
-        ZStack {
-            Image(.quizBackground)
-                .resizable()
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            
-            VStack {
+        if quizManager.gameComplete {
+            QuizCompletedView(quizManager)
+                .transition(.slide)
+                .animation(.easeInOut, value: quizManager.gameComplete)
+        } else {
+            ZStack {
+                Image(.quizBackground)
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
                 
-                HStack {
-                    Text("Score: \(quizManager.currentScore)")
-                        .bold()
-                        .font(.headline)
-                        .padding(.leading, 14)
+                VStack {
+                    
+                    HStack {
+                        Text("Score: \(quizManager.currentScore)")
+                            .bold()
+                            .font(.headline)
+                            .padding(.leading, 14)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Text("Exit")
+                                .font(.headline)
+                                .padding(10)
+                                .background(Color.red)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
+                        }
+                    }
+                    .padding()
                     
                     Spacer()
+                }
+                
+                VStack(spacing: 16) {
+                    Text("Question \(quizManager.count + 1)")
+                        .font(.system(size: 36, weight: .bold, design: .serif))
                     
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Text("Exit")
-                            .font(.headline)
-                            .padding(10)
-                            .background(Color.red)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                    }
+                    Text(quizManager.currentQuestion)
+                        .font(.system(size: 28, weight: .bold, design: .monospaced))
+                        .padding(.top, 100)
+                        .padding(.bottom, 100)
+                    
+                    QuizButton(1, quizManager, $isCorrect, $showAnimation)
+                    QuizButton(2, quizManager, $isCorrect, $showAnimation)
+                    QuizButton(3, quizManager, $isCorrect, $showAnimation)
+                    QuizButton(4, quizManager, $isCorrect, $showAnimation)
+                    
                 }
-                .padding()
+                .frame(maxHeight: .infinity, alignment: .top)
+                .padding(.top, 80)
                 
-                Spacer()
-            }
-            
-            VStack(spacing: 16) {
-                Text("Question \(quizManager.count + 1)")
-                    .font(.system(size: 36, weight: .bold, design: .serif))
-                
-                Text(quizManager.currentQuestion)
-                    .font(.system(size: 28, weight: .bold, design: .monospaced))
-                    .padding(.top, 100)
-                    .padding(.bottom, 100)
-                
-                QuizButton(1, quizManager, $isCorrect, $showAnimation)
-                QuizButton(2, quizManager, $isCorrect, $showAnimation)
-                QuizButton(3, quizManager, $isCorrect, $showAnimation)
-                QuizButton(4, quizManager, $isCorrect, $showAnimation)
-                
-            }
-            .frame(maxHeight: .infinity, alignment: .top)
-            .padding(.top, 80)
-            
-            if showAnimation {
-                ZStack {
-                    if isCorrect == true {
-                        ConfettiView()
-                    } else if isCorrect == false {
-                        RedXView()
+                if showAnimation {
+                    ZStack {
+                        if isCorrect == true {
+                            ConfettiView()
+                        } else if isCorrect == false {
+                            RedXView()
+                        }
                     }
-                }
-                .transition(.opacity)
-                .onAppear {
-                    // Stop animation after a delay
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        withAnimation {
-                            showAnimation = false
+                    .transition(.opacity)
+                    .onAppear {
+                        // Stop animation after a delay
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            withAnimation {
+                                showAnimation = false
+                            }
                         }
                     }
                 }
+                
+                VStack {
+                    Spacer()
+                    HStack {
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "info.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                        }.padding(5)
+                    }
+                }.padding()
+                
+            }.onAppear {
+                if quizManager.currentQuestion.isEmpty {
+                    showAlert = true
+                }
+            }.alert("Quiz Unavailable", isPresented: $showAlert) {
+                Button("OK", role: .cancel) { presentationMode.wrappedValue.dismiss() }
+            } message: {
+                Text("This quiz is currently unavailable.")
             }
-            
-        }.onAppear {
-            if quizManager.currentQuestion.isEmpty {
-                showAlert = true
-            }
-        }.alert("Quiz Unavailable", isPresented: $showAlert) {
-            Button("OK", role: .cancel) { presentationMode.wrappedValue.dismiss() }
-        } message: {
-            Text("This quiz is currently unavailable.")
+            .transition(.scale)
+            .animation(.easeInOut, value: quizManager.gameComplete)
         }
     }
 }
