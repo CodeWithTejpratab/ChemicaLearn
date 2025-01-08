@@ -127,9 +127,9 @@
 		8D2194D32BF17E8A0042C653 /* ChemicaLearnTest */ = {
 			isa = PBXGroup;
 			children = (
-				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
 				8D2194D42BF17E8A0042C653 /* AppDelegate.swift */,
 				8D2194D62BF17E8A0042C653 /* SceneDelegate.swift */,
+				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
 				8D121CC72BF28F49004434A8 /* Model */,
 				8D121CC32BF28E0B004434A8 /* Controller */,
 				8D121CC42BF28E21004434A8 /* View */,
