@@ -8,6 +8,12 @@
 import UIKit
 import SwiftUI
 
+/*
+ Links for UIHostingController
+ https://stackoverflow.com/questions/56433826/include-swiftui-views-in-existing-uikit-application
+ https://developer.apple.com/documentation/swiftui/uihostingcontroller
+*/
+
 class displayQuizCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     

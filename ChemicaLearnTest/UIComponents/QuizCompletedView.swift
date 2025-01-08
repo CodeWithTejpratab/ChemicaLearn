@@ -22,6 +22,7 @@ struct QuizCompletedView: View {
                 .resizable()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
+            
             VStack(spacing: 16) {
                 Image(.completeLogo)
                     .resizable()
@@ -39,7 +40,14 @@ struct QuizCompletedView: View {
                     .bold()
                     .font(.custom("Avenir Next", size: 30))
                 
-                Spacer()
+                Spacer().frame(height: 40)
+                
+                Text("You’re a chemistry whiz!")
+                    .font(.custom("Avenir Next", size: 34))
+                    .frame(width: 300)
+                    .multilineTextAlignment(.center)
+                    
+                Spacer().frame(height: 40)
                 
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
