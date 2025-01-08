@@ -55,6 +55,7 @@ class QuizManager: ObservableObject {
         
         let isCorrect = (title == shuffledQuiz[count].correctChoice)
         handleResults(isCorrect)
+        
         if isCorrect { currentScore += 1 }
         if count == shuffledQuiz.count - 1 {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
