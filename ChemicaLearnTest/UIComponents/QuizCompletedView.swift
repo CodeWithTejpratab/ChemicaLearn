@@ -34,7 +34,6 @@ struct QuizCompletedView: View {
                 Text("Score")
                     .bold()
                     .font(.custom("Avenir Next", size: 40))
-                    .padding()
                 
                 Text("\(quizManager.currentScore)/10")
                     .bold()
