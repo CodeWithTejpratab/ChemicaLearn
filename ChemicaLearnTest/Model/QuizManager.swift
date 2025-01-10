@@ -39,6 +39,15 @@ class QuizManager: ObservableObject {
         return shuffledQuiz[count].question
     }
     
+    var endMessage: String {
+        switch currentScore {
+        case 0...3: return K.QCompleteMessage.poor
+        case 4...6: return K.QCompleteMessage.good
+        case 7...: return K.QCompleteMessage.excellent
+        default: return K.QCompleteMessage.poor
+        }
+    }
+    
     func title(with index: Int) -> String {
         guard !shuffledQuiz.isEmpty else { return "" }
         switch index {

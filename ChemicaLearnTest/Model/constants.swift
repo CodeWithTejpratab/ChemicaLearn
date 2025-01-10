@@ -54,4 +54,9 @@ struct K {
         static let SignUpError = "Something went wrong with email or password when trying to sign-up"
     }
     
+    struct QCompleteMessage {
+        static let poor = "Keep trying, practice is key!"
+        static let good = "Good effort, almost there!"
+        static let excellent = "You’re a chemistry whiz!"
+    }
 }

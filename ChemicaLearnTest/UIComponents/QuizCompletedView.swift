@@ -41,7 +41,7 @@ struct QuizCompletedView: View {
                 
                 Spacer().frame(height: 40)
                 
-                Text("You’re a chemistry whiz!")
+                Text(quizManager.endMessage)
                     .font(.custom("Avenir Next", size: 34))
                     .frame(width: 300)
                     .multilineTextAlignment(.center)
