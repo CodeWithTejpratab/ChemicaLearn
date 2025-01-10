@@ -30,7 +30,6 @@ struct QuizCellView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color.white)
-        .cornerRadius(8)
         .shadow(radius: 5)
     }
 }
