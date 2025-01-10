@@ -65,6 +65,7 @@ struct QuizCompletedView: View {
                 Spacer()
             }
         }
+        .colorScheme(.light)
     }
 }
 

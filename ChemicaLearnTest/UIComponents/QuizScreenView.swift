@@ -66,14 +66,15 @@ struct QuizScreenView: View {
                     
                     Text(quizManager.currentQuestion)
                         .font(.system(size: 28, weight: .bold, design: .monospaced))
-                        .padding(.top, 100)
-                        .padding(.bottom, 100)
+                        .padding(.vertical, 100)
+                        .frame(width: UIScreen.main.bounds.width * 0.8, height: 260)
+                        .minimumScaleFactor(0.5)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(2)
                     
-                    QuizButton(1, quizManager, $isCorrect, $showAnimation)
-                    QuizButton(2, quizManager, $isCorrect, $showAnimation)
-                    QuizButton(3, quizManager, $isCorrect, $showAnimation)
-                    QuizButton(4, quizManager, $isCorrect, $showAnimation)
-                    
+                    ForEach(1...4, id: \.self) { index in
+                        QuizButton(index, quizManager, $isCorrect, $showAnimation)
+                    }
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 .padding(.top, 80)
@@ -122,6 +123,7 @@ struct QuizScreenView: View {
             }
             .transition(.scale)
             .animation(.easeInOut, value: quizManager.gameComplete)
+            .colorScheme(.light)
         }
     }
 }
