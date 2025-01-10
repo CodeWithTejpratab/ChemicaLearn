@@ -31,7 +31,7 @@ struct QuizCompletedView: View {
                     .padding(.top, 40)
                     .padding()
                 
-                Text(K.StrStringValue.score)
+                Text(K.StringValue.score)
                     .bold()
                     .font(.custom(K.Fonts.avenirNext, size: 40))
                 
@@ -51,7 +51,7 @@ struct QuizCompletedView: View {
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
                 }) {
-                    Text(K.StrStringValue.completed)
+                    Text(K.StringValue.completed)
                         .font(.custom(K.Fonts.avenirNext, size: 18))
                         .bold()
                         .foregroundColor(.black)

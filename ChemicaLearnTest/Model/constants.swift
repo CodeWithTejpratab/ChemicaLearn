@@ -64,7 +64,7 @@ struct K {
         static let avenirNext = "Avenir Next"
     }
     
-    struct StrStringValue {
+    struct StringValue {
         static let score = "Score"
         static let completed = "Completed"
         static let exit = "Exit"
