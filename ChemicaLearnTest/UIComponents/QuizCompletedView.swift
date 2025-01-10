@@ -31,18 +31,18 @@ struct QuizCompletedView: View {
                     .padding(.top, 40)
                     .padding()
                 
-                Text("Score")
+                Text(K.StrStringValue.score)
                     .bold()
-                    .font(.custom("Avenir Next", size: 40))
+                    .font(.custom(K.Fonts.avenirNext, size: 40))
                 
-                Text("\(quizManager.currentScore)/10")
+                Text("\(quizManager.currentScore)/\(quizManager.totalQuestions)")
                     .bold()
-                    .font(.custom("Avenir Next", size: 30))
+                    .font(.custom(K.Fonts.avenirNext, size: 30))
                 
                 Spacer().frame(height: 40)
                 
                 Text(quizManager.endMessage)
-                    .font(.custom("Avenir Next", size: 34))
+                    .font(.custom(K.Fonts.avenirNext, size: 34))
                     .frame(width: 300)
                     .multilineTextAlignment(.center)
                     
@@ -51,8 +51,8 @@ struct QuizCompletedView: View {
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
                 }) {
-                    Text("Completed")
-                        .font(.custom("Avenir Next", size: 18))
+                    Text(K.StrStringValue.completed)
+                        .font(.custom(K.Fonts.avenirNext, size: 18))
                         .bold()
                         .foregroundColor(.black)
                         .padding()

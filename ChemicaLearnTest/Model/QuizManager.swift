@@ -34,6 +34,10 @@ class QuizManager: ObservableObject {
     @Published var count = 0
     @Published var currentScore = 0
     
+    var totalQuestions: Int {
+        shuffledQuiz.count
+    }
+    
     var currentQuestion: String {
         guard !shuffledQuiz.isEmpty else { return "" }
         return shuffledQuiz[count].question

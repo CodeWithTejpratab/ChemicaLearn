@@ -59,4 +59,15 @@ struct K {
         static let good = "Good effort, almost there!"
         static let excellent = "You’re a chemistry whiz!"
     }
+    
+    struct Fonts {
+        static let avenirNext = "Avenir Next"
+    }
+    
+    struct StrStringValue {
+        static let score = "Score"
+        static let completed = "Completed"
+        static let exit = "Exit"
+        static let question = "Question"
+    }
 }

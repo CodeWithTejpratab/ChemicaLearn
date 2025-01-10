@@ -37,7 +37,7 @@ struct QuizScreenView: View {
                 VStack {
                     
                     HStack {
-                        Text("Score: \(quizManager.currentScore)")
+                        Text("\(K.StrStringValue.score): \(quizManager.currentScore)")
                             .bold()
                             .font(.headline)
                             .padding(.leading, 14)
@@ -47,7 +47,7 @@ struct QuizScreenView: View {
                         Button(action: {
                             presentationMode.wrappedValue.dismiss()
                         }) {
-                            Text("Exit")
+                            Text(K.StrStringValue.exit)
                                 .font(.headline)
                                 .padding(10)
                                 .background(Color.red)
@@ -61,7 +61,7 @@ struct QuizScreenView: View {
                 }
                 
                 VStack(spacing: 16) {
-                    Text("Question \(quizManager.count + 1)")
+                    Text("\(K.StrStringValue.question) \(quizManager.count + 1)")
                         .font(.system(size: 36, weight: .bold, design: .serif))
                     
                     Text(quizManager.currentQuestion)
