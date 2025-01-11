@@ -70,5 +70,5 @@ struct QuizCompletedView: View {
 }
 
 #Preview {
-    QuizCompletedView(QuizManager(for: K.quiz.simpleReaction))
+    QuizCompletedView(QuizManager(for: K.Quiz.simpleReaction))
 }

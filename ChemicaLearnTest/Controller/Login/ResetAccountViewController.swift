@@ -33,10 +33,10 @@ class ResetAccountViewController: AppUIViewControllerHelper {
             Auth.auth().sendPasswordReset(withEmail: email) { error in
                 if let e = error {
                     self.resetMessageLabel.text = e.localizedDescription
-                    self.resetTextBackground.image = UIImage(named: K.imgText.incorrectLogin)
+                    self.resetTextBackground.image = UIImage(named: K.ImgText.incorrectLogin)
                 } else {
-                    self.resetTextBackground.image = UIImage(named: K.imgText.loginTextField)
-                    self.resetMessageLabel.text = K.message.resetmessage
+                    self.resetTextBackground.image = UIImage(named: K.ImgText.loginTextField)
+                    self.resetMessageLabel.text = K.Message.resetmessage
                 }
                 self.resetMessageLabel.isHidden = false
             }

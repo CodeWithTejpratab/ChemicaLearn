@@ -15,12 +15,12 @@ struct K {
     static let cellName = "ReusableCell"
     static let logOutSegue = "logOutSegue"
     
-    struct imgText {
+    struct ImgText {
         static let incorrectLogin = "incorrectLoginTextField"
         static let loginTextField = "loginTextField"
     }
     
-    struct bImg {
+    struct BImg {
         static let signinButton = "signinButton"
         static let signinButtonPressed = "signinButtonPressed"
         static let correctButton = "correctButton"
@@ -33,7 +33,7 @@ struct K {
         static let normalButtonPressed = "normalButtonPressed"
     }
     
-    struct quiz {
+    struct Quiz {
         static let moleculeMaker = "moleculeMaker"
         static let organicChemistry = "organicChemistry"
         static let simpleReaction = "simpleReaction"
@@ -41,11 +41,11 @@ struct K {
         static let electroChemistry = "electroChemistry"
     }
     
-    struct message {
+    struct Message {
         static let resetmessage = "we have sent you an email to reset your password if the account exist"
     }
     
-    struct user {
+    struct User {
         static let username = "username"
     }
     

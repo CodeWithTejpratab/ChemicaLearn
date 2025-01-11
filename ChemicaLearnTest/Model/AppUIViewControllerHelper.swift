@@ -39,12 +39,12 @@ class AppUIViewControllerHelper: UIViewController {
     
     private func updateAnimateOnPress(for img: UIImageView) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            img.image = UIImage(named: K.bImg.signinButton)
+            img.image = UIImage(named: K.BImg.signinButton)
         }
     }
     
     func loginAnimateOnPressed(for img: UIImageView) {
-        img.image = UIImage(named: K.bImg.signinButtonPressed)
+        img.image = UIImage(named: K.BImg.signinButtonPressed)
         updateAnimateOnPress(for: img)
     }
     

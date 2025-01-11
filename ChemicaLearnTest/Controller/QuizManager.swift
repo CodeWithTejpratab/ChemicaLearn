@@ -19,11 +19,11 @@ class QuizManager: ObservableObject {
     
     private func getShuffledQuiz(for quizType: String) -> [Reaction] {
         switch quizType {
-        case K.quiz.simpleReaction:
+        case K.Quiz.simpleReaction:
             return simpleReactionQuestions.shuffled()
-        case K.quiz.organicChemistry:
+        case K.Quiz.organicChemistry:
             return questionOrganicChemistry.shuffled()
-        case K.quiz.moleculeMaker, K.quiz.acidBaseRacation, K.quiz.electroChemistry:
+        case K.Quiz.moleculeMaker, K.Quiz.acidBaseRacation, K.Quiz.electroChemistry:
             return []
         default:
             return []

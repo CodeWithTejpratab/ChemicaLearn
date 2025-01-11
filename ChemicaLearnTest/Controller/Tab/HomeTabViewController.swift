@@ -16,11 +16,11 @@ class HomeTabViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private let quizSelectionArray = [
-         K.quiz.simpleReaction,
-         K.quiz.organicChemistry,
-         K.quiz.moleculeMaker,
-         K.quiz.acidBaseRacation,
-         K.quiz.electroChemistry,
+         K.Quiz.simpleReaction,
+         K.Quiz.organicChemistry,
+         K.Quiz.moleculeMaker,
+         K.Quiz.acidBaseRacation,
+         K.Quiz.electroChemistry,
     ]
     
     override func viewDidLoad() {

@@ -82,13 +82,13 @@ extension SiginUpViewController {
         case retypedPassword, password:
             if let pass1 = password.text, let pass2 = retypedPassword.text {
                 if pass1 != pass2{
-                    retypedPasswordBackground.image = UIImage(named: K.imgText.incorrectLogin)
+                    retypedPasswordBackground.image = UIImage(named: K.ImgText.incorrectLogin)
                 } else {
-                    retypedPasswordBackground.image = UIImage(named: K.imgText.loginTextField)
+                    retypedPasswordBackground.image = UIImage(named: K.ImgText.loginTextField)
                 }
             }
         default:
-            retypedPasswordBackground.image = UIImage(named: K.imgText.loginTextField)
+            retypedPasswordBackground.image = UIImage(named: K.ImgText.loginTextField)
         }
     }
     

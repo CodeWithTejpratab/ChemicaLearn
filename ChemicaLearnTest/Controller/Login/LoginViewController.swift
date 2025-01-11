@@ -43,10 +43,10 @@ class LoginViewController: AppUIViewControllerHelper {
         if let email = loginEmailText.text, let password = loginPasswordText.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error {
-                    self.setTextFieldBackground(to: K.imgText.incorrectLogin)
+                    self.setTextFieldBackground(to: K.ImgText.incorrectLogin)
                     self.showErrorAlert(with: e.localizedDescription)
                 } else {
-                    self.setTextFieldBackground(to: K.imgText.loginTextField)
+                    self.setTextFieldBackground(to: K.ImgText.loginTextField)
                     self.performSegue(withIdentifier: K.loginSegue, sender: self)
                 }
             }

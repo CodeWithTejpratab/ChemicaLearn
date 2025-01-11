@@ -228,5 +228,5 @@ struct RedXView: View {
 }
 
 #Preview {
-    QuizScreenView(for: K.quiz.simpleReaction)
+    QuizScreenView(for: K.Quiz.simpleReaction)
 }

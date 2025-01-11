@@ -7,23 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D121CC62BF28EF3004434A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D121CC52BF28EF3004434A8 /* LoginViewController.swift */; };
 		8D2194D52BF17E8A0042C653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2194D42BF17E8A0042C653 /* AppDelegate.swift */; };
 		8D2194D72BF17E8A0042C653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2194D62BF17E8A0042C653 /* SceneDelegate.swift */; };
 		8D2194DC2BF17E8A0042C653 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D2194DB2BF17E8A0042C653 /* Base */; };
 		8D2194DE2BF17E8B0042C653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2194DD2BF17E8B0042C653 /* Assets.xcassets */; };
 		8D2194E12BF17E8B0042C653 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D2194E02BF17E8B0042C653 /* Base */; };
 		8D44F2202C31AA1B0008847E /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D44F21F2C31AA1B0008847E /* ProfilePageViewController.swift */; };
-		8D59C7BB2C266BC300A6378C /* settingPageVeiwController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D59C7BA2C266BC300A6378C /* settingPageVeiwController.swift */; };
 		8D6274D52C0A09FD00B67498 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D6274D42C0A09FD00B67498 /* GoogleService-Info.plist */; };
 		8D6274D82C0A0B1600B67498 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8D6274D72C0A0B1600B67498 /* FirebaseAnalytics */; };
 		8D6274DA2C0A0B1600B67498 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8D6274D92C0A0B1600B67498 /* FirebaseAuth */; };
 		8D6274DC2C0A0B1600B67498 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8D6274DB2C0A0B1600B67498 /* FirebaseFirestore */; };
-		8D75B6B72C07DF800060E252 /* SiginUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6B62C07DF800060E252 /* SiginUpViewController.swift */; };
-		8D75B6B92C07DFA40060E252 /* ResetAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6B82C07DFA40060E252 /* ResetAccountViewController.swift */; };
 		8D75B6BB2C07E91B0060E252 /* AppUIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */; };
 		8D8C0A432D21EEB700871AAE /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C0A422D21EEB700871AAE /* QuizManager.swift */; };
-		8D9646FC2C0BF02D00D17486 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9646FB2C0BF02D00D17486 /* HomeTabViewController.swift */; };
 		8DB2C76B2C08D2D400BC4764 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB2C76A2C08D2D400BC4764 /* IQKeyboardManagerSwift */; };
 		8DB2C76D2C092E4700BC4764 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2C76C2C092E4700BC4764 /* constants.swift */; };
 		8DC91E252BF58D20007A11BF /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC91E242BF58D20007A11BF /* Reaction.swift */; };
@@ -32,7 +27,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D121CC52BF28EF3004434A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8D2194D12BF17E8A0042C653 /* ChemicaLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemicaLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2194D42BF17E8A0042C653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D2194D62BF17E8A0042C653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,13 +35,9 @@
 		8D2194E02BF17E8B0042C653 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D2194E22BF17E8B0042C653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D44F21F2C31AA1B0008847E /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
-		8D59C7BA2C266BC300A6378C /* settingPageVeiwController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingPageVeiwController.swift; sourceTree = "<group>"; };
 		8D6274D42C0A09FD00B67498 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		8D75B6B62C07DF800060E252 /* SiginUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiginUpViewController.swift; sourceTree = "<group>"; };
-		8D75B6B82C07DFA40060E252 /* ResetAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetAccountViewController.swift; sourceTree = "<group>"; };
 		8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIViewControllerHelper.swift; sourceTree = "<group>"; };
 		8D8C0A422D21EEB700871AAE /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
-		8D9646FB2C0BF02D00D17486 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		8DB2C76C2C092E4700BC4764 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		8DC91E242BF58D20007A11BF /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
 		8DEBB9012C0C407100213907 /* displayQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayQuizCell.swift; sourceTree = "<group>"; };
@@ -55,6 +45,8 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8D7D38682D32E93A00F78F78 /* Login */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Login; sourceTree = "<group>"; };
+		8D7D386A2D32E9CF00F78F78 /* Tab */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Tab; sourceTree = "<group>"; };
 		8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UIComponents; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -76,11 +68,9 @@
 		8D121CC32BF28E0B004434A8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8D121CC52BF28EF3004434A8 /* LoginViewController.swift */,
-				8D75B6B62C07DF800060E252 /* SiginUpViewController.swift */,
-				8D75B6B82C07DFA40060E252 /* ResetAccountViewController.swift */,
-				8D9646FB2C0BF02D00D17486 /* HomeTabViewController.swift */,
-				8D59C7BA2C266BC300A6378C /* settingPageVeiwController.swift */,
+				8D8C0A422D21EEB700871AAE /* QuizManager.swift */,
+				8D7D38682D32E93A00F78F78 /* Login */,
+				8D7D386A2D32E9CF00F78F78 /* Tab */,
 				8D44F21F2C31AA1B0008847E /* ProfilePageViewController.swift */,
 			);
 			path = Controller;
@@ -103,7 +93,6 @@
 				8DC91E242BF58D20007A11BF /* Reaction.swift */,
 				8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */,
 				8DB2C76C2C092E4700BC4764 /* constants.swift */,
-				8D8C0A422D21EEB700871AAE /* QuizManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +145,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				8D7D38682D32E93A00F78F78 /* Login */,
+				8D7D386A2D32E9CF00F78F78 /* Tab */,
 				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
 			);
 			name = ChemicaLearn;
@@ -227,18 +218,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8C0A432D21EEB700871AAE /* QuizManager.swift in Sources */,
-				8D59C7BB2C266BC300A6378C /* settingPageVeiwController.swift in Sources */,
-				8D121CC62BF28EF3004434A8 /* LoginViewController.swift in Sources */,
 				8DB2C76D2C092E4700BC4764 /* constants.swift in Sources */,
-				8D75B6B72C07DF800060E252 /* SiginUpViewController.swift in Sources */,
 				8D2194D52BF17E8A0042C653 /* AppDelegate.swift in Sources */,
 				8D2194D72BF17E8A0042C653 /* SceneDelegate.swift in Sources */,
 				8D75B6BB2C07E91B0060E252 /* AppUIViewControllerHelper.swift in Sources */,
 				8DEBB9032C0C407100213907 /* displayQuizCell.swift in Sources */,
 				8D44F2202C31AA1B0008847E /* ProfilePageViewController.swift in Sources */,
-				8D75B6B92C07DFA40060E252 /* ResetAccountViewController.swift in Sources */,
 				8DC91E252BF58D20007A11BF /* Reaction.swift in Sources */,
-				8D9646FC2C0BF02D00D17486 /* HomeTabViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

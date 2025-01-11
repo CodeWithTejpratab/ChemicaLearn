@@ -33,3 +33,7 @@ struct QuizCellView: View {
         .shadow(radius: 5)
     }
 }
+
+#Preview {
+    QuizCellView(quizImageName: K.Quiz.simpleReaction, index: 0)
+}
