@@ -8,7 +8,7 @@
 
 import Foundation
 
-class QuizManager: ObservableObject {
+final class QuizManager: ObservableObject {
     let quizType: String
     private var shuffledQuiz: [Reaction] = []
     
