@@ -168,6 +168,7 @@ struct QuizButton: View {
                     .foregroundColor(.black)
             }
         }
+        .disabled(showAnimation)
     }
     
     func triggerAnimation() {
