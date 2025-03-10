@@ -7,6 +7,7 @@
 // You're the most amazing and handsome developer I ever saw ~ Wifey
 
 import Foundation
+import AVKit
 
 final class QuizManager: ObservableObject {
     let quizType: String
@@ -33,6 +34,7 @@ final class QuizManager: ObservableObject {
     @Published var gameComplete = false
     @Published var count = 0
     @Published var currentScore = 0
+    private var audioPlayer: AVAudioPlayer!
     
     var totalQuestions: Int {
         shuffledQuiz.count
@@ -76,6 +78,15 @@ final class QuizManager: ObservableObject {
             }
         }
         if count < shuffledQuiz.count - 1 { count += 1 }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.playSound(for: isCorrect ? "shine-11-268907" : "error-5-199276")
+        }
     }
     
+    func playSound(for soundName: String) {
+        guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else { return }
+        audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+        audioPlayer.play()
+    }
 }

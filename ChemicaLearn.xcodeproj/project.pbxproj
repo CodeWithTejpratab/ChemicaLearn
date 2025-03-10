@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D15E3222D80F1230070457A /* error-5-199276.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D15E31F2D80F1230070457A /* error-5-199276.mp3 */; };
+		8D15E3232D80F1230070457A /* shine-11-268907.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8D15E3202D80F1230070457A /* shine-11-268907.mp3 */; };
 		8D2194D52BF17E8A0042C653 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2194D42BF17E8A0042C653 /* AppDelegate.swift */; };
 		8D2194D72BF17E8A0042C653 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2194D62BF17E8A0042C653 /* SceneDelegate.swift */; };
 		8D2194DC2BF17E8A0042C653 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8D2194DB2BF17E8A0042C653 /* Base */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D15E31F2D80F1230070457A /* error-5-199276.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "error-5-199276.mp3"; sourceTree = "<group>"; };
+		8D15E3202D80F1230070457A /* shine-11-268907.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "shine-11-268907.mp3"; sourceTree = "<group>"; };
 		8D2194D12BF17E8A0042C653 /* ChemicaLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemicaLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2194D42BF17E8A0042C653 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D2194D62BF17E8A0042C653 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8D15E3212D80F1230070457A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8D15E31F2D80F1230070457A /* error-5-199276.mp3 */,
+				8D15E3202D80F1230070457A /* shine-11-268907.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		8D2194C82BF17E890042C653 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +131,7 @@
 			children = (
 				8D2194D42BF17E8A0042C653 /* AppDelegate.swift */,
 				8D2194D62BF17E8A0042C653 /* SceneDelegate.swift */,
+				8D15E3212D80F1230070457A /* Sounds */,
 				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
 				8D121CC72BF28F49004434A8 /* Model */,
 				8D121CC32BF28E0B004434A8 /* Controller */,
@@ -203,6 +217,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2194DE2BF17E8B0042C653 /* Assets.xcassets in Resources */,
+				8D15E3222D80F1230070457A /* error-5-199276.mp3 in Resources */,
+				8D15E3232D80F1230070457A /* shine-11-268907.mp3 in Resources */,
 				8DEBB9042C0C407100213907 /* displayQuizCell.xib in Resources */,
 				8D6274D52C0A09FD00B67498 /* GoogleService-Info.plist in Resources */,
 				8D2194E12BF17E8B0042C653 /* Base in Resources */,
