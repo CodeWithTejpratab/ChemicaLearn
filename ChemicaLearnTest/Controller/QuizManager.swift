@@ -87,6 +87,11 @@ final class QuizManager: ObservableObject {
     func playSound(for soundName: String) {
         guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else { return }
         audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+        } catch(let error) {
+            print(error.localizedDescription)
+        }
         audioPlayer.play()
     }
 }
