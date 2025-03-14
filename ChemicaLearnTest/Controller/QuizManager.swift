@@ -19,21 +19,22 @@ final class QuizManager: ObservableObject {
     }
     
     private func getShuffledQuiz(for quizType: String) -> [Reaction] {
-        switch quizType {
+        return switch quizType {
         case K.Quiz.simpleReaction:
-            return simpleReactionQuestions.shuffled()
+            simpleReactionQuestions.shuffled()
         case K.Quiz.organicChemistry:
-            return questionOrganicChemistry.shuffled()
+            questionOrganicChemistry.shuffled()
         case K.Quiz.moleculeMaker, K.Quiz.acidBaseRacation, K.Quiz.electroChemistry:
-            return []
+            []
         default:
-            return []
+            []
         }
     }
     
     @Published var gameComplete = false
     @Published var count = 0
     @Published var currentScore = 0
+    @Published var showAnimation = false
     private var audioPlayer: AVAudioPlayer!
     
     var totalQuestions: Int {
@@ -65,6 +66,12 @@ final class QuizManager: ObservableObject {
         }
     }
     
+    func toggleAnimation() {
+        DispatchQueue.main.async {
+            self.showAnimation.toggle()
+        }
+    }
+    
     func buttonPressed(for title: String, handleResults: @escaping (Bool) -> Void) {
         guard count < shuffledQuiz.count else { return }
         
@@ -79,19 +86,21 @@ final class QuizManager: ObservableObject {
         }
         if count < shuffledQuiz.count - 1 { count += 1 }
         
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
+        DispatchQueue.global().sync {
             self.playSound(for: isCorrect ? "shine-11-268907" : "error-5-199276")
         }
     }
     
     func playSound(for soundName: String) {
         guard let path = Bundle.main.path(forResource: soundName, ofType: "mp3") else { return }
-        audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+        let url = URL(fileURLWithPath: path)
+        
         do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
             try AVAudioSession.sharedInstance().setCategory(.playback)
-        } catch(let error) {
-            print(error.localizedDescription)
+            audioPlayer.play()
+        } catch {
+            print("Error loading sound: \(error.localizedDescription)")
         }
-        audioPlayer.play()
     }
 }

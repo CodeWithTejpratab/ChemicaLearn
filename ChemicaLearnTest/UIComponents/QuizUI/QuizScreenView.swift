@@ -10,15 +10,13 @@ import SwiftUI
 
 // MARK: - QuizScreenView
 struct QuizScreenView: View {
-    var quizType: String
     @StateObject private var quizManager: QuizManager
     @Environment(\.presentationMode) var presentationMode
     @State private var showAlert = false
     @State private var isCorrect: Bool = false
-    @State private var showAnimation = false
+    @State private var showHint = false
     
     init(for quizType: String) {
-        self.quizType = quizType
         _quizManager = StateObject(wrappedValue: QuizManager(for: quizType))
     }
     
@@ -73,44 +71,26 @@ struct QuizScreenView: View {
                         .lineLimit(2)
                     
                     ForEach(1...4, id: \.self) { index in
-                        QuizButton(index, quizManager, $isCorrect, $showAnimation)
+                        QuizButton(index, quizManager, $isCorrect)
                     }
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 .padding(.top, 80)
                 
-                if showAnimation {
-                    ZStack {
-                        if isCorrect == true {
-                            ConfettiView()
-                        } else if isCorrect == false {
-                            RedXView()
-                        }
-                    }
-                    .transition(.opacity)
-                    .onAppear {
-                        // Stop animation after a delay
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            withAnimation {
-                                showAnimation = false
+                if quizManager.showAnimation {
+                    (isCorrect ? AnyView(ConfettiView()) : AnyView(RedXView()))
+                        .transition(.opacity)
+                        .animation(.easeInOut, value: quizManager.showAnimation)
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                                withAnimation {
+                                    quizManager.toggleAnimation()
+                                }
                             }
                         }
-                    }
                 }
                 
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "info.circle.fill")
-                                .font(.largeTitle)
-                                .foregroundColor(.white)
-                        }.padding(5)
-                    }
-                }.padding()
+                HintButton { showHint.toggle() }
                 
             }.onAppear {
                 if quizManager.currentQuestion.isEmpty {
@@ -134,13 +114,15 @@ struct QuizButton: View {
     var title: String
     @ObservedObject var quizManager: QuizManager
     @Binding var isCorrect: Bool
-    @Binding var showAnimation: Bool
     
-    init(_ choice: Int, _ manager: QuizManager, _ isCorrect: Binding<Bool>, _ showAnimation: Binding<Bool>) {
+    init(
+        _ choice: Int,
+        _ manager: QuizManager,
+        _ isCorrect: Binding<Bool>
+    ) {
         self.title = manager.title(with: choice)
         self.quizManager = manager
         self._isCorrect = isCorrect
-        self._showAnimation = showAnimation
     }
     
     var body: some View {
@@ -168,12 +150,12 @@ struct QuizButton: View {
                     .foregroundColor(.black)
             }
         }
-        .disabled(showAnimation)
+        .disabled(quizManager.showAnimation)
     }
     
     func triggerAnimation() {
         withAnimation {
-            showAnimation = true
+            quizManager.toggleAnimation()
         }
     }
 }
@@ -225,6 +207,24 @@ struct RedXView: View {
                     )
             }
         }
+    }
+}
+
+struct HintButton: View {
+    let action: () -> Void
+    var body: some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Button(action: action) {
+                    Image(systemName: "info.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .padding(5)
+                }
+            }
+        }.padding()
     }
 }
 
