@@ -23,7 +23,6 @@
 		8D8C0A432D21EEB700871AAE /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C0A422D21EEB700871AAE /* QuizManager.swift */; };
 		8DB2C76B2C08D2D400BC4764 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB2C76A2C08D2D400BC4764 /* IQKeyboardManagerSwift */; };
 		8DB2C76D2C092E4700BC4764 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2C76C2C092E4700BC4764 /* constants.swift */; };
-		8DC91E252BF58D20007A11BF /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC91E242BF58D20007A11BF /* Reaction.swift */; };
 		8DEBB9032C0C407100213907 /* displayQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB9012C0C407100213907 /* displayQuizCell.swift */; };
 		8DEBB9042C0C407100213907 /* displayQuizCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB9022C0C407100213907 /* displayQuizCell.xib */; };
 /* End PBXBuildFile section */
@@ -43,12 +42,12 @@
 		8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIViewControllerHelper.swift; sourceTree = "<group>"; };
 		8D8C0A422D21EEB700871AAE /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		8DB2C76C2C092E4700BC4764 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		8DC91E242BF58D20007A11BF /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
 		8DEBB9012C0C407100213907 /* displayQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayQuizCell.swift; sourceTree = "<group>"; };
 		8DEBB9022C0C407100213907 /* displayQuizCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = displayQuizCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8D5A731B2D97788A00D430BE /* Quiz */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Quiz; sourceTree = "<group>"; };
 		8D7D38682D32E93A00F78F78 /* Login */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Login; sourceTree = "<group>"; };
 		8D7D386A2D32E9CF00F78F78 /* Tab */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Tab; sourceTree = "<group>"; };
 		8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UIComponents; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		8D121CC32BF28E0B004434A8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */,
 				8D8C0A422D21EEB700871AAE /* QuizManager.swift */,
 				8D7D38682D32E93A00F78F78 /* Login */,
 				8D7D386A2D32E9CF00F78F78 /* Tab */,
@@ -94,8 +94,7 @@
 		8D121CC72BF28F49004434A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8DC91E242BF58D20007A11BF /* Reaction.swift */,
-				8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */,
+				8D5A731B2D97788A00D430BE /* Quiz */,
 				8DB2C76C2C092E4700BC4764 /* constants.swift */,
 			);
 			path = Model;
@@ -113,7 +112,7 @@
 		8D2194C82BF17E890042C653 = {
 			isa = PBXGroup;
 			children = (
-				8D2194D32BF17E8A0042C653 /* ChemicaLearnTest */,
+				8D2194D32BF17E8A0042C653 /* ChemicaLearn */,
 				8D2194D22BF17E8A0042C653 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,7 +125,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8D2194D32BF17E8A0042C653 /* ChemicaLearnTest */ = {
+		8D2194D32BF17E8A0042C653 /* ChemicaLearn */ = {
 			isa = PBXGroup;
 			children = (
 				8D2194D42BF17E8A0042C653 /* AppDelegate.swift */,
@@ -140,7 +139,7 @@
 				8D2194E22BF17E8B0042C653 /* Info.plist */,
 				8D6274D42C0A09FD00B67498 /* GoogleService-Info.plist */,
 			);
-			path = ChemicaLearnTest;
+			path = ChemicaLearn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +158,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				8D5A731B2D97788A00D430BE /* Quiz */,
 				8D7D38682D32E93A00F78F78 /* Login */,
 				8D7D386A2D32E9CF00F78F78 /* Tab */,
 				8DBD2CFC2D13E6B2001F0BF0 /* UIComponents */,
@@ -240,7 +240,6 @@
 				8D75B6BB2C07E91B0060E252 /* AppUIViewControllerHelper.swift in Sources */,
 				8DEBB9032C0C407100213907 /* displayQuizCell.swift in Sources */,
 				8D44F2202C31AA1B0008847E /* ProfilePageViewController.swift in Sources */,
-				8DC91E252BF58D20007A11BF /* Reaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +393,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7VJ65H25MY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ChemicaLearnTest/Info.plist;
+				INFOPLIST_FILE = ChemicaLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -405,7 +404,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChemicaLearnTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChemicaLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -426,7 +425,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7VJ65H25MY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ChemicaLearnTest/Info.plist;
+				INFOPLIST_FILE = ChemicaLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -437,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChemicaLearnTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChemicaLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

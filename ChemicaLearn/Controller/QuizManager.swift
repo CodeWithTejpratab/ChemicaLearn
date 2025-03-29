@@ -10,32 +10,24 @@ import Foundation
 import AVKit
 
 final class QuizManager: ObservableObject {
-    let quizType: String
-    private var shuffledQuiz: [Reaction] = []
+    @Published var gameComplete = false
+    @Published var count = 0
+    @Published var currentScore = 0
+    @Published var showAnimation = false
     
+    let quizType: String
+    private var shuffledQuiz: [Reaction] = Array()
+    private var audioPlayer: AVAudioPlayer!
+
     init(for quizType: String) {
         self.quizType = quizType
         self.shuffledQuiz = self.getShuffledQuiz(for: quizType)
     }
     
     private func getShuffledQuiz(for quizType: String) -> [Reaction] {
-        return switch quizType {
-        case K.Quiz.simpleReaction:
-            simpleReactionQuestions.shuffled()
-        case K.Quiz.organicChemistry:
-            questionOrganicChemistry.shuffled()
-        case K.Quiz.moleculeMaker, K.Quiz.acidBaseRacation, K.Quiz.electroChemistry:
-            []
-        default:
-            []
-        }
+        guard let quiz = QuizFactory.create(for: quizType) else { return [] }
+        return quiz.questions.shuffled()
     }
-    
-    @Published var gameComplete = false
-    @Published var count = 0
-    @Published var currentScore = 0
-    @Published var showAnimation = false
-    private var audioPlayer: AVAudioPlayer!
     
     var totalQuestions: Int {
         shuffledQuiz.count
