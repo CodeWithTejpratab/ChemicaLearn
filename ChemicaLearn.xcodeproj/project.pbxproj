@@ -23,6 +23,7 @@
 		8D8C0A432D21EEB700871AAE /* QuizManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8C0A422D21EEB700871AAE /* QuizManager.swift */; };
 		8DB2C76B2C08D2D400BC4764 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8DB2C76A2C08D2D400BC4764 /* IQKeyboardManagerSwift */; };
 		8DB2C76D2C092E4700BC4764 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB2C76C2C092E4700BC4764 /* constants.swift */; };
+		8DCFC4BB2D9F8D7200780066 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCFC4BA2D9F8D7200780066 /* FirebaseManager.swift */; };
 		8DEBB9032C0C407100213907 /* displayQuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEBB9012C0C407100213907 /* displayQuizCell.swift */; };
 		8DEBB9042C0C407100213907 /* displayQuizCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DEBB9022C0C407100213907 /* displayQuizCell.xib */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		8D75B6BA2C07E91B0060E252 /* AppUIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIViewControllerHelper.swift; sourceTree = "<group>"; };
 		8D8C0A422D21EEB700871AAE /* QuizManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizManager.swift; sourceTree = "<group>"; };
 		8DB2C76C2C092E4700BC4764 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		8DCFC4BA2D9F8D7200780066 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		8DEBB9012C0C407100213907 /* displayQuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = displayQuizCell.swift; sourceTree = "<group>"; };
 		8DEBB9022C0C407100213907 /* displayQuizCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = displayQuizCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 			children = (
 				8D5A731B2D97788A00D430BE /* Quiz */,
 				8DB2C76C2C092E4700BC4764 /* constants.swift */,
+				8DCFC4BA2D9F8D7200780066 /* FirebaseManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					8D2194D02BF17E8A0042C653 = {
 						CreatedOnToolsVersion = 15.3;
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8C0A432D21EEB700871AAE /* QuizManager.swift in Sources */,
+				8DCFC4BB2D9F8D7200780066 /* FirebaseManager.swift in Sources */,
 				8DB2C76D2C092E4700BC4764 /* constants.swift in Sources */,
 				8D2194D52BF17E8A0042C653 /* AppDelegate.swift in Sources */,
 				8D2194D72BF17E8A0042C653 /* SceneDelegate.swift in Sources */,
@@ -300,6 +304,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7VJ65H25MY;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -363,6 +368,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7VJ65H25MY;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -391,7 +397,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7VJ65H25MY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChemicaLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -423,7 +428,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7VJ65H25MY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChemicaLearn/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

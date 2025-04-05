@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class AppUIViewControllerHelper: UIViewController {
     
@@ -55,6 +56,11 @@ class AppUIViewControllerHelper: UIViewController {
         let action = UIAlertAction(title: "Okay", style: .default)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func presentView<Content: View>(using view: Content) {
+        let hostingController = UIHostingController(rootView: view)
+        present(hostingController, animated: true, completion: nil)
     }
 }
 

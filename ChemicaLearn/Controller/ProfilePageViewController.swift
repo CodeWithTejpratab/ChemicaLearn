@@ -12,10 +12,10 @@ import FirebaseFirestore
 
 class ProfilePageViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var username: UILabel!
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        username.text = FirebaseManager.shared.userName
     }
     
 

@@ -40,7 +40,7 @@ class SiginUpViewController: AppUIViewControllerHelper {
         
         if checkPassword(for: password.text, and: retypedPassword.text) {
             if let email = userEmail.text, let password = password.text {
-                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                FirebaseManager.shared.createUser(email: email, password: password) { error in
                     if let e = error {
                         self.showErrorAlert(with: e.localizedDescription)
                     } else {

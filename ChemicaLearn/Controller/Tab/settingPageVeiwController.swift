@@ -6,9 +6,8 @@
 //
 
 import UIKit
-import FirebaseCore
+import SwiftUI
 import FirebaseAuth
-import FirebaseFirestore
 
 class settingPageVeiwController: AppUIViewControllerHelper {
     
@@ -23,7 +22,8 @@ class settingPageVeiwController: AppUIViewControllerHelper {
     
     @IBAction func editUsernameButtonPresses(_ sender: UIButton) {
         loginAnimateOnPressed(for: userNameButtonImg)
-        
+        let editUserNameView = EditUserNameView()
+        presentView(using: editUserNameView)
     }
 
     @IBAction func changeEmailButtonPressed(_ sender: UIButton) {

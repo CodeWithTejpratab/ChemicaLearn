@@ -41,7 +41,7 @@ class LoginViewController: AppUIViewControllerHelper {
         super.loginAnimateOnPressed(for: img)
         
         if let email = loginEmailText.text, let password = loginPasswordText.text {
-            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            FirebaseManager.shared.signin(email: email, password: password) { error in
                 if let e = error {
                     self.setTextFieldBackground(to: K.ImgText.incorrectLogin)
                     self.showErrorAlert(with: e.localizedDescription)

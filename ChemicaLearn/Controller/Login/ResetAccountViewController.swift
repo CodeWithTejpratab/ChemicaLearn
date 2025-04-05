@@ -30,7 +30,7 @@ class ResetAccountViewController: AppUIViewControllerHelper {
         super.loginAnimateOnPressed(for: img)
         
         if let email = resetTextField.text {
-            Auth.auth().sendPasswordReset(withEmail: email) { error in
+            FirebaseManager.shared.resetPassword(email: email) { error in
                 if let e = error {
                     self.resetMessageLabel.text = e.localizedDescription
                     self.resetTextBackground.image = UIImage(named: K.ImgText.incorrectLogin)
