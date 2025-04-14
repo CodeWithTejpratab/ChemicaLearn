@@ -13,7 +13,8 @@ struct QuizFactory {
         switch quizType {
         case K.Quiz.simpleReaction: SimpleReaction()
         case K.Quiz.organicChemistry: OrganicChemistry()
-        case K.Quiz.moleculeMaker, K.Quiz.acidBaseRacation, K.Quiz.electroChemistry: nil
+        case K.Quiz.moleculeMaker, K.Quiz.electroChemistry: nil
+        case K.Quiz.acidBaseRacation: AcidBaseReaction()
         default: nil
         }
     }
